@@ -1,0 +1,13 @@
+.fileUploader {
+  input {
+    display: none;
+  }
+  button {
+    .fa-upload{
+      margin-right: 10px;
+    }
+  }
+  &__dndText{
+    text-align: center;
+  }
+}

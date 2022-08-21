@@ -1,0 +1,7 @@
+@mixin feedbackIconsStyle ($fontSize, $padding) {
+  color: $textColor2;
+  padding: $padding;
+  border-radius: 100%;
+  background-color: $mainColor;
+  font-size: $fontSize;
+}

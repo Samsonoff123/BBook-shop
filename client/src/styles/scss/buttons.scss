@@ -1,0 +1,93 @@
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: $textColor2;
+  text-align: center;
+  user-select: none;
+  background-color: $mainColor;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  padding: 0.385rem 0.75rem;
+  font-size: inherit;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0 0 0 0.2rem $btnShodow;
+    color: $textColor2;
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem $btnShodow;
+  }
+  &-slide {
+    border: 2px solid $textColor2;
+    background-color: transparent;
+    padding: 15px 25px;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &-dark {
+    background-color: transparent;
+    color: $textColor;
+    border: 2px solid $textColor;
+    max-width: 250px;
+    &:hover {
+      box-shadow: 0 0 0 2px $textColor;
+      color: $textColor;
+    }
+  }
+  &:disabled {
+    background-color: $extraColor;
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  &_center {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.btnGroup {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .btn {
+    display: flex;
+  }
+  &_center,
+  &_left,
+  &_right {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    .btn {
+      display: flex;
+      &:nth-child(n + 2) {
+        margin-left: 20px;
+      }
+    }
+  }
+  &_center {
+    justify-content: center;
+  }
+  &_right {
+    justify-content: flex-end;
+  }
+  &_left {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 575px) {
+ 
+  button,
+  .btn {
+    font-size: 14px;
+  }
+}

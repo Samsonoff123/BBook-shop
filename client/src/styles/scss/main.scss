@@ -1,0 +1,100 @@
+@import "./variables.scss";
+@import "./flexWraps.scss";
+@import "./formControls.scss";
+@import "./buttons.scss";
+@import "./modal.scss";
+@import "./password.scss";
+@import "./authPages.scss";
+@import "./animation.scss";
+
+body {
+  color: $textColor;
+  cursor: default;
+  position: relative;
+  min-height: 100vh;
+}
+
+img {
+  pointer-events: none;
+  width: 100%;
+}
+
+input {
+  cursor: text;
+  user-select: auto;
+  border-radius: 15px;
+  outline: none;
+  padding: 2px 10px;
+}
+
+p {
+  margin: 0;
+}
+
+.readMore {
+  cursor: pointer;
+  font-style: italic;
+  margin-left: 10px;
+  color: $additionalTextColor;
+  font-size: 17px;
+  svg {
+    margin-left: 10px;
+  }
+  &:hover {
+    color: $mainColor;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.content {
+  background-color: $textColor2;
+  padding-top: 90px;
+  padding-bottom: 20px;
+  min-height: 93vh;
+}
+
+.userAvatar {
+  width: 152px;
+  height: 152px;
+  overflow: hidden;
+  border-radius: 100%;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+.hiddenElem {
+  display: none;
+}
+
+.blockTitle {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 575px) {
+  body {
+    font-size: 15px;
+  }
+  .userAvatar {
+    margin: 0 auto;
+  }
+  .blockTitle {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,13 @@
+.imgUploader {
+  position: relative;
+  max-height: 500px;
+  &__img {
+    max-width: 300px;
+  }
+  &__editing {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,165 @@
+@import "../../styles/scss/variables.scss";
+@import "../../styles/scss/mixins.scss";
+
+.footer {
+  background-color: $extraColor;
+  margin-top: 10px;
+  height: 58px;
+  &__content {
+    text-align: center;
+    height: 100%;
+    svg {
+      color: $mainColor;
+      font-size: 25px;
+    }
+    span {
+      margin-left: 15px;
+    }
+  }
+  &_fixed {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .upArrow {
+    position: fixed;
+    bottom: 3%;
+    left: 2%;
+    .fa-chevron-up {
+      color: $mainColor;
+      padding: 1px 8px 5px 8px;
+      border-radius: 100%;
+    }
+  }
+  .fas {
+    font-size: 60px;
+    opacity: 0;
+    transition: all 0.5s;
+    &_active {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  .feedback {
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    width: 135px;
+    height: 135px;
+    .mainIcon {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      .fa-comment-dots {
+        @include feedbackIconsStyle(65px, 12px);
+      }
+    }
+    .helperIcon {
+      .fa-instagram,
+      .fa-vk,
+      .fa-facebook {
+        max-width: 40px;
+        max-height: 40px;
+      }
+      &_active {
+        opacity: 1 !important;
+        cursor: pointer;
+        &:nth-child(2) {
+          top: 10%;
+        }
+        &:nth-child(3) {
+          top: 35%;
+          left: 25%;
+        }
+        &:nth-child(4) {
+          left: 10%;
+        }
+      }
+      .fab_active {
+        cursor: pointer;
+      }
+    }
+    .helperIcon1 {
+      position: absolute;
+      top: 23%;
+      right: 0;
+      opacity: 0;
+      transition: all ease-in-out 0.5s;
+      .fa-instagram {
+        @include feedbackIconsStyle(43px, 7px);
+      }
+    }
+    .helperIcon2 {
+      position: absolute;
+      top: 50%;
+      left: 37%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: all ease-in-out 0.5s;
+      .fa-vk {
+        @include feedbackIconsStyle(43px, 8px);
+      }
+    }
+    .helperIcon3 {
+      position: absolute;
+      bottom: 0;
+      left: 23%;
+      opacity: 0;
+      transition: all ease-in-out 0.5s;
+      .fa-facebook {
+        @include feedbackIconsStyle(43px, 7px);
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    .feedback {
+      right: 5%;
+      width: 90px;
+      height: 90px;
+      .mainIcon {
+        right: -10%;
+        .fa-comment-dots {
+          @include feedbackIconsStyle(50px, 10px);
+        }
+      }
+      .helperIcon {
+        &_active {
+          &:nth-child(2) {
+            top: 5%;
+          }
+          &:nth-child(3) {
+            top: 32%;
+            left: 20%;
+          }
+          &:nth-child(4) {
+            left: 5%;
+          }
+        }
+      }
+      .helperIcon1 {
+        .fa-instagram {
+          @include feedbackIconsStyle(30px, 5px);
+        }
+      }
+      .helperIcon2 {
+        .fa-vk {
+          @include feedbackIconsStyle(27px, 5px);
+        }
+      }
+      .helperIcon3 {
+        .fa-facebook {
+          @include feedbackIconsStyle(30px, 5px);
+        }
+      }
+    }
+    .upArrow {
+      .fa-chevron-up {
+        font-size: 50px;
+      }
+    }
+  }
+}

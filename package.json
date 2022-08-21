@@ -1,0 +1,44 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "Shop on NodeJs and React",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production JWTSECRET=secret-key-string MONGOURL=mongodb+srv://admin:bzZ8888q@cluster0-dblwq.mongodb.net/shop BASEURL=http://localhost:3000 node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "client-build": "npm run build --prefix client",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "node",
+    "js",
+    "web",
+    "mern",
+    "react"
+  ],
+  "author": "Manaikhan Berikbol <nn.z.icon@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.3",
+    "sass": "^1.54.5"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.27",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.11",
+    "vhost": "^3.0.2",
+    "voca": "^1.4.0"
+  }
+}

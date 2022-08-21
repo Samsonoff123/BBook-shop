@@ -1,0 +1,88 @@
+@import "../../styles/scss/variables.scss";
+
+.accountPage {
+  padding: 0 40px;
+  .formControl {
+    border-color: $textColor2;
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      border-color: $borderColor;
+    }
+  }
+  &__userInfo {
+    .userAvatar {
+      background-color: $extraColor;
+      position: relative;
+      height: 225px;
+      width: 225px;
+      &__menu {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        visibility: hidden;
+        height: 0;
+        background-color: #000000b3;
+        transition: visibility 0.3s, height 0.4s, background-color 0.4s;
+        .btn {
+          background-color: transparent;
+          margin: 0;
+          padding: 0;
+          &:hover,
+          &:focus {
+            box-shadow: none;
+          }
+          &:hover {
+            color: $mainColor;
+          }
+          .fa-undo {
+            font-size: 18px;
+            margin-right: 10px;
+          }
+        }
+        &_active {
+          visibility: visible;
+          height: 80px;
+        }
+      }
+    }
+    .btn {
+      margin-top: 20px;
+    }
+    .userEmail,
+    .userLogin {
+      padding-left: 5px;
+      .formControl {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+    &-detail {
+      margin-bottom: 40px;
+    }
+    &-aboutUser {
+      min-height: 250px;
+      border-color: $borderColor !important;
+    }
+  }
+  &__boughtGoods,
+  &__reviews {
+    margin-top: 80px;
+  }
+  &__exitBtn {
+    width: 40%;
+  }
+}
+
+@media (max-width: 575px) {
+  .accountPage {
+    font-size: 17px;
+    padding: 0;
+    .fullName {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+}
